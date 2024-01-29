@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorSecondary"
+    tools:context=".ContactDetail">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/profileIv"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_250sdp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/nameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:textColor="@color/colorTextSecondary"
+            android:textSize="@dimen/_16sdp"
+            android:textStyle="bold"
+            tools:text="Krishna" />
+
+        <TextView
+            android:id="@+id/noteTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp"
+            android:textColor="@color/colorTextSecondary"
+            android:textSize="@dimen/_12sdp"
+            tools:text="This is for note area" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp"
+            android:stretchColumns="2">
+
+            <TableRow>
+
+                <TextView
+                    android:text="Phone"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textSize="@dimen/_14sdp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/phoneTv"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:padding="@dimen/_5sdp"
+                    android:textColor="@color/colorTextSecondary"
+                    android:textSize="@dimen/_14sdp"
+                    android:textStyle="bold"
+                    tools:text="9022325170" />
+            </TableRow>
+            <TableRow>
+
+                <TextView
+                    android:text="Birth Day"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textSize="@dimen/_14sdp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/birthdayTv"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:padding="@dimen/_5sdp"
+                    android:textColor="@color/colorTextSecondary"
+                    android:textSize="@dimen/_14sdp"
+                    android:textStyle="bold"
+                    tools:text="18-11-2002" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:text="Email"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textSize="@dimen/_14sdp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/emailTv"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:padding="@dimen/_5sdp"
+                    android:textColor="@color/colorTextSecondary"
+                    android:textSize="@dimen/_14sdp"
+                    android:textStyle="bold"
+                    tools:text="krishna@gmail.com" />
+
+            </TableRow>
+            <!--<TableRow>
+                <TextView
+                    android:text="Added Time"
+                    android:textSize="@dimen/_14sdp"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/addedTimeTv"
+                    tools:text="9022325170"
+                    android:textSize="@dimen/_14sdp"
+                    android:padding="@dimen/_5sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorTextSecondary"/>
+
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:text="Updated Time"
+                    android:textSize="@dimen/_14sdp"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/updatedTimeTv"
+                    tools:text="9022325170"
+                    android:textSize="@dimen/_14sdp"
+                    android:padding="@dimen/_5sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorTextSecondary"/>
+
+            </TableRow>-->
+
+        </TableLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+            <!--fab button for add date to database-->
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/callfab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:clickable="true"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:backgroundTint="@color/colorTextPrimary"
+                android:contentDescription="@string/todo"
+                android:elevation="@dimen/_5sdp"
+                android:src="@drawable/baseline_call_24"
+                app:pressedTranslationZ="@dimen/_10sdp"
+                app:tint="@color/white" />
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/messagefab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:clickable="true"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:backgroundTint="@color/colorTextPrimary"
+                android:contentDescription="@string/todo"
+                android:elevation="@dimen/_5sdp"
+                android:src="@drawable/baseline_message_24"
+                app:pressedTranslationZ="@dimen/_10sdp"
+                app:tint="@color/white" />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>
